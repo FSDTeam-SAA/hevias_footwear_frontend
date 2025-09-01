@@ -68,14 +68,12 @@ const ForgotPasswordForm = () => {
   }
   return (
     <div>
-      <div className="w-full md:w-[547px] p-3 md:p-7 lg:p-8 rounded-[16px] bg-white">
+      <div className="w-full md:w-[547px] p-3 md:p-7 lg:p-8 rounded-[16px] ">
         <h3 className="text-2xl md:text-[28px] lg:text-[32px] font-bold text-[#1F2937] text-center leading-[120%] pb-3 lg:pb-4">
-          Forgot Password
+          Reset password
         </h3>
         <p className="text-base font-normal text-[#787878] text-center leading-[150%] ">
-          Please enter the email address linked to your <br /> account.
-          We&apos;ll send a one-time password (OTP) to <br /> your email for
-          verification.
+          Enter your email to receive the OTP
         </p>
         <Form {...form}>
           <form

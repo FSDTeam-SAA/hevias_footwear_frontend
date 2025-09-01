@@ -72,7 +72,7 @@ const LoginForm = () => {
   }
   return (
     <div>
-      <div className="w-full md:w-[547px] p-3 md:p-7 lg:p-8 rounded-[16px] bg-white">
+      <div className="w-full md:w-[547px] p-3 md:p-7 lg:p-8 rounded-[16px] ">
         <h3 className="text-2xl md:text-[28px] lg:text-[32px] font-extrabold text-[#1F2937] text-center leading-[120%] ">
           Welcome Back
         </h3>
@@ -184,7 +184,7 @@ const LoginForm = () => {
                     <FormMessage className="text-red-500" />
                   </FormItem>
                   <Link
-                    className="text-sm font-medium text-[#293440] leading-[120%] hover:underline"
+                    className="text-sm font-medium text-[#2695FF] leading-[120%] hover:underline"
                     href="/forgot-password"
                   >
                     Forgot Password?
@@ -201,15 +201,15 @@ const LoginForm = () => {
               {isLoading ? "Sign In ..." : "Sign In"}
             </Button>
 
-            {/* <p className="text-sm font-medium leading-[120%] text-[#293440] text-center ">
+            <p className="text-sm font-medium leading-[120%] text-[#293440] text-center ">
               Don’t have an account?
               <Link
-                href="/sign-up"
+                href="/register"
                 className="text-[#293440] pl-1 hover:underline"
               >
                 Register Here Now
               </Link>{" "}
-            </p> */}
+            </p>
           </form>
         </Form>
       </div>

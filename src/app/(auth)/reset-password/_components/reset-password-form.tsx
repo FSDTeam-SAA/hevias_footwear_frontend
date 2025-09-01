@@ -79,7 +79,7 @@ const ResetPasswordForm = () => {
   }
   return (
     <div>
-      <div className="w-full md:w-[547px] p-3 md:p-7 lg:p-8 rounded-[16px] bg-white">
+      <div className="w-full md:w-[547px] p-3 md:p-7 lg:p-8 rounded-[16px] ">
         <h3 className="text-2xl md:text-[28px] lg:text-[32px] font-bold text-[#1F2937] text-center leading-[120%] pb-2">
           New Password
         </h3>
@@ -196,7 +196,7 @@ const ResetPasswordForm = () => {
 
             <Button
               disabled={isPending}
-              className="text-lg font-medium text-[#F8FAF9] leading-[120%] rounded-[8px] w-full h-[52px] bg-[#293440]"
+              className="text-lg font-medium text-[#F8FAF9] leading-[120%] rounded-[8px] w-full h-[52px] bg-btnPrimary"
               type="submit"
             >
               {isPending ? "Continuing..." : "Continue"}

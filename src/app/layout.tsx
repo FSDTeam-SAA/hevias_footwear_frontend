@@ -5,6 +5,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import AppProvider from "@/providers/AppProvider";
 import Navbar from "@/components/shared/Navbar";
+import AuthProvider from "@/providers/AuthProvider";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -25,12 +26,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cn(dmSans.className, "antialiased bg-[#f2f1f0]")}>
-        <AppProvider>
-          <header>
-            <Navbar />
-          </header>
-          {children}
-        </AppProvider>
+        <AuthProvider>
+          <AppProvider>
+            <header>
+              <Navbar />
+            </header>
+            {children}
+          </AppProvider>
+        </AuthProvider>
       </body>
     </html>
   );

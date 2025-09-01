@@ -1,14 +1,12 @@
 import Image from "next/image";
 import React from "react";
-import haviasFooterLogo from '../../../public/images/authlogo.png'
-import loginimage from '../../../public/images/loginimage.png'
 
 const AuthLayoutDesign = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="h-screen grid grid-cols-1 md:grid-cols-2 gap-2 bg-[#FAFAFA]  ">
       <div className="  relative md:grid-cols-1 flex ">
         <Image
-          src={loginimage}
+          src={"/loginimage.png"}
           width={1082}
           height={960}
           alt="auth image"
@@ -16,7 +14,7 @@ const AuthLayoutDesign = ({ children }: { children: React.ReactNode }) => {
         />
         <div className="absolute  top-0 ring-0 w-[172px] h-[214px]">
           <Image
-            src={haviasFooterLogo}
+            src={"/authlogo.png"}
             width={1082}
             height={960}
             alt="auth logo"

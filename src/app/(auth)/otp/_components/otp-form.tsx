@@ -150,7 +150,7 @@ export default function OtpForm() {
   };
 
   return (
-    <div className="w-full md:w-[547px] p-3 md:p-7 lg:p-8 rounded-[16px] bg-white">
+    <div className="w-full md:w-[547px] p-3 md:p-7 lg:p-8 rounded-[16px] ">
       <h3 className="text-2xl md:text-[28px] lg:text-[32px] font-bold text-primary text-center leading-[120%] pb-2">
         Enter OTP
       </h3>
@@ -198,7 +198,7 @@ export default function OtpForm() {
         <Button
           disabled={isPending}
           onClick={handleVerify}
-          className="text-base font-medium text-[#F8FAF9] leading-[120%] rounded-[8px] w-full h-[48px] bg-[#293440] "
+          className="text-base font-medium text-[#F8FAF9] leading-[120%] rounded-[8px] w-full h-[48px] bg-btnPrimary "
           type="submit"
         >
           {isPending ? "Verifying..." : "Verify"}
