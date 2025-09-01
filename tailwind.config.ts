@@ -23,6 +23,7 @@ const config: Config = {
         },
       },
       colors: {
+         btnPrimary: '#797068',
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
