@@ -1,7 +1,13 @@
 import React from "react";
 import { navigationItems } from "../../../../utils/navigationItems";
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import { ChevronDown } from "lucide-react";
+import Link from "next/link";
 
 const DesktopNavigation = () => {
   return (
@@ -30,12 +36,12 @@ const DesktopNavigation = () => {
               </DropdownMenuContent>
             </DropdownMenu>
           ) : (
-            <a
-              href={item.href}
+            <Link
+              href={`${item.href}`}
               className="text-sm font-medium hover:text-gray-300 transition-colors"
             >
               {item.label}
-            </a>
+            </Link>
           )}
         </div>
       ))}

@@ -3,10 +3,10 @@ import { navigationItems } from "../../../../utils/navigationItems";
 import { ChevronDown } from "lucide-react";
 import { useShardStore } from "@/zustand/shared";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const MobileNavigation = () => {
-
-    const {setIsOpen} = useShardStore()
+  const { setIsOpen } = useShardStore();
 
   return (
     <nav className="flex flex-col space-y-4">
@@ -41,7 +41,9 @@ const MobileNavigation = () => {
         </div>
       ))}
 
-      <Button>Sign in</Button>
+      <Link href={'/login'}>
+        <Button>Sign in</Button>
+      </Link>
     </nav>
   );
 };

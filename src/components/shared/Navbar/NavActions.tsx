@@ -1,6 +1,8 @@
+'use client'
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Heart, ShoppingCart } from "lucide-react";
+import Link from "next/link";
 import React from "react";
 
 const NavActions = () => {
@@ -20,7 +22,11 @@ const NavActions = () => {
         </Badge>
       </div>
 
-      <Button size="sm" className="hidden lg:block">Sign In</Button>
+      <Link href={'/login'}>
+        <Button size="sm" className="hidden lg:block">
+          Sign In
+        </Button>
+      </Link>
     </div>
   );
 };

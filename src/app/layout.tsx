@@ -4,8 +4,8 @@ import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import AppProvider from "@/providers/AppProvider";
-import Navbar from "@/components/shared/Navbar/Navbar";
 import AuthProvider from "@/providers/AuthProvider";
+import { Toaster } from "sonner";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -27,13 +27,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={cn(dmSans.className, "antialiased bg-[#f2f1f0]")}>
         <AuthProvider>
-          <AppProvider>
-            <header>
-              <Navbar />
-            </header>
-            {children}
-          </AppProvider>
+          <AppProvider>{children}</AppProvider>
         </AuthProvider>
+
+        <Toaster />
       </body>
     </html>
   );
