@@ -4,7 +4,7 @@ import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import AppProvider from "@/providers/AppProvider";
-import Navbar from "@/components/shared/Navbar";
+import Navbar from "@/components/shared/Navbar/Navbar";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],

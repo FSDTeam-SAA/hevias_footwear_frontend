@@ -9,6 +9,19 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      container: {
+        center: true,
+        padding: {
+          xl: "2rem",
+          lg: "1.5rem",
+          md: "1.5rem",
+          sm: "1rem",
+          DEFAULT: "1rem",
+        },
+        screens: {
+          "2xl": "1400px",
+        },
+      },
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
