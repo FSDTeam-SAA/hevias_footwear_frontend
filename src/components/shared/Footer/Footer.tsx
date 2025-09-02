@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export function Footer() {
   return (
-    <div className="bg-[#1c2228] text-white">
+    <div className="bg-[#1c2228] text-white mt-24">
       <div className="container py-12">
         <div className="grid grid-cols-1 lg:grid-cols-6">
           {/* Logo and Description */}
