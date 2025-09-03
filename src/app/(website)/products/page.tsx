@@ -3,7 +3,7 @@ import AllproductBody from './_components/AllproductBody'
 
 const Page = () => {
     return (
-        <div>
+        <div className='bg-[#F8FEFF]'>
             <AllproductBody />
         </div>
     )

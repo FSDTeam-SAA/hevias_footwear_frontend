@@ -5,30 +5,34 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import Image from "next/image";
 import type { StaticImageData } from "next/image";
+import Link from "next/link";
 
-interface Product {
+export interface Product {
     id: string;
     name: string;
-    image: string | StaticImageData;
+    images: (string | StaticImageData)[]; // multiple images
     price: number;
     discount: number; // percentage off
     rating: number;
     description: string;
     moq: number; // Minimum Order Quantity
+    stock_quantity: number; // for quantity selector
 }
-
 export default function ProductCard({ product }: { product: Product }) {
+    console.log(product.images[0])
     return (
         <Card className="w-full sm:w-[260px] md:w-[280px] lg:w-[310px] border shadow-none rounded-2xl overflow-hidden group">
             {/* Image + Wishlist Button */}
             <CardHeader className="relative p-0 overflow-hidden">
-                <Image
-                    width={900}
-                    height={900}
-                    src={product.image}
-                    alt={product.name}
-                    className="w-full h-[180px] cursor-pointer sm:h-[200px] md:h-[220px] lg:h-[250px] object-contain bg-[#E9DDD366] transition-transform duration-300 ease-in-out hover:scale-105"
-                />
+                <Link href={`/products/${product.id}`}>
+                    <Image
+                        width={900}
+                        height={900}
+                        src={product.images[0]}
+                        alt={product.name}
+                        className="w-full h-[180px] cursor-pointer sm:h-[200px] md:h-[220px] lg:h-[250px] object-contain bg-[#E9DDD366] transition-transform duration-300 ease-in-out hover:scale-105"
+                    />
+                </Link>
                 <button className="absolute top-3 right-3 bg-white rounded-full p-2 shadow-md hover:bg-red-100 hover:scale-110 transition-transform duration-300">
                     <Heart className="h-5 w-5 text-red-500" />
                 </button>
