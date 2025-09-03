@@ -27,7 +27,7 @@ export default function ProductCard({ product }: { product: Product }) {
                     height={900}
                     src={product.image}
                     alt={product.name}
-                    className="w-full h-[180px] sm:h-[200px] md:h-[220px] lg:h-[250px] object-contain bg-[#E9DDD366] transition-transform duration-300 ease-in-out hover:scale-105"
+                    className="w-full h-[180px] cursor-pointer sm:h-[200px] md:h-[220px] lg:h-[250px] object-contain bg-[#E9DDD366] transition-transform duration-300 ease-in-out hover:scale-105"
                 />
                 <button className="absolute top-3 right-3 bg-white rounded-full p-2 shadow-md hover:bg-red-100 hover:scale-110 transition-transform duration-300">
                     <Heart className="h-5 w-5 text-red-500" />

@@ -23,7 +23,7 @@ const config: Config = {
         },
       },
       colors: {
-         btnPrimary: '#797068',
+        btnPrimary: '#797068',
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
@@ -75,6 +75,10 @@ const config: Config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    require('@tailwindcss/typography')
+  ]
+
 };
 export default config;
