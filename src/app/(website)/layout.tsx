@@ -9,7 +9,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div>
+    <div className="bg-white">
       <TopBar />
       <header className="sticky top-0 z-50 transition-all">
         <Navbar />
