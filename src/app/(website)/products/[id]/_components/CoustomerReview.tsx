@@ -93,7 +93,7 @@ const CoustomerReview = () => {
                     </h2>
                     <div className="space-y-[66px] scroll-hide mb-8 max-h-[540px] overflow-y-auto ">
                         {reviewsData.map((review) => (
-                            <div key={review.id} className="border-b flex flex-col gap-3">
+                            <div key={review.id} className=" flex flex-col gap-3">
                                 <p className="font-medium">{review.name}</p>
                                 <div className="flex items-center gap-2 mb-2">
                                     <RatingStars rating={review.rating} />
