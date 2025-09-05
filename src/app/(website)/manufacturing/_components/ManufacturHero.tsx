@@ -84,10 +84,6 @@ export const ManufacturHero: React.FC<HeroSectionProps> = ({
               {/* Overlay effect */}
               {/* <div className="absolute inset-0 bg-blue-500/10 mix-blend-overlay" /> */}
             </div>
-            
-            {/* Decorative elements */}
-            <div className="absolute -top-4 -right-4 w-24 h-24 bg-blue-500/20 rounded-full blur-xl" />
-            <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-cyan-500/20 rounded-full blur-xl" />
           </div>
         </div>
       </div>

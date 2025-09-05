@@ -1,5 +1,5 @@
 import React from 'react';
-import { FeaturesSection } from './FeaturesSection';
+import { FeaturesSection } from '../../manufacturing/_components/FeaturesSection';
 
 // Define the Feature type
 interface Feature {
@@ -9,7 +9,7 @@ interface Feature {
   imageAlt: string;
 }
 
-function FeaturesCart() {
+function BuyerFeature() {
   const features: Feature[] = [
     {
       title: "Expert Oversight",
@@ -31,14 +31,7 @@ function FeaturesCart() {
         "We coordinate logistics end-to-end, handling customs clearance and delivering straight to your door or final customer.",
       imageSrc: "/Union3.png",
       imageAlt: "Warehouse with stacked shipping boxes",
-    },
-    {
-      title: "Brand Oversight",
-      description:
-        "All rights to the designs will be owned by you. Brand or product names, box materials and management and such take care of making the samples and manufacturing details.",
-      imageSrc: "/Union4.png",
-      imageAlt: "Brand design materials and tools on desk",
-    },
+    }, 
   ];
 
   return (
@@ -48,4 +41,4 @@ function FeaturesCart() {
   );
 }
 
-export default FeaturesCart;
+export default BuyerFeature;

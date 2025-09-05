@@ -18,9 +18,9 @@ export const FeaturesSection: React.FC<FeaturesSectionProps> = ({
   className = "" 
 }) => {
   return (
-    <section className={`py-16 bg-gray-50 ${className}`}>
+    <section className={`py-16 ${className}`}>
       <div className="container mx-auto px-4">
-        <div className="max-w-7xl mx-auto space-y-20">
+        <div className="container mx-auto space-y-20">
           {features.map((feature, index) => {
             const isEven = index % 2 === 0;
             
@@ -43,7 +43,7 @@ export const FeaturesSection: React.FC<FeaturesSectionProps> = ({
                 
                 {/* Image */}
                 <div className={`${isEven ? '' : 'lg:col-start-1'}`}>
-                  <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
+                  <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
                     <Image
                       src={feature.imageSrc}
                       alt={feature.imageAlt}
