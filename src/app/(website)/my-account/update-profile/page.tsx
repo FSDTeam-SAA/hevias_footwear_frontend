@@ -1,8 +1,11 @@
 import React from 'react'
+import UpdateProfle from './_components/updateProfileBody'
 
 const Page = () => {
   return (
-    <div>Page</div>
+    <div>
+      <UpdateProfle/>
+    </div>
   )
 }
 

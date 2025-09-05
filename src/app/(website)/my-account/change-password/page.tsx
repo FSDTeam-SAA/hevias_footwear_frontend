@@ -1,8 +1,9 @@
 import React from 'react'
+import ChangePassword from './_components/ChangePasswordBody'
 
 const Page = () => {
   return (
-    <div>Page</div>
+    <div><ChangePassword/></div>
   )
 }
 
