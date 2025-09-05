@@ -1,5 +1,5 @@
 import React from 'react';
-import { FeaturesSection } from './FeaturesSection';
+import { FeaturesSection } from '../../manufacturing/_components/FeaturesSection';
 
 // Define the Feature type
 interface Feature {
@@ -9,7 +9,7 @@ interface Feature {
   imageAlt: string;
 }
 
-function FeaturesCart() {
+function BecomeSellerFeture() {
   const features: Feature[] = [
     {
       title: "Expert Oversight",
@@ -48,4 +48,4 @@ function FeaturesCart() {
   );
 }
 
-export default FeaturesCart;
+export default BecomeSellerFeture;

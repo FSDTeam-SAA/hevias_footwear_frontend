@@ -11,7 +11,7 @@ function page() {
         <ManufacturHero
           title="Custom Manufacturing in Latin America"
           description="FastLane helps you source and produce custom products efficiently. Expertise in footwear, apparel, accessories, and more."
-          buttonText="Learn More"
+          buttonText="Explore Our process"
           buttonHref="/process" // optional, use if you want link instead of onClick
           imageSrc="/mcuh.svg"
           imageAlt="Modern manufacturing facility"
@@ -28,7 +28,6 @@ function page() {
       <div>
         <FeaturesCart />
       </div>
-
     </div>
   );
 }
