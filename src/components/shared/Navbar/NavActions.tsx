@@ -12,14 +12,16 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Heart, ShoppingCart, User, LogOut, Package } from "lucide-react";
+import { signOut, useSession } from "next-auth/react";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
 const NavActions = () => {
   const [cartCount, setCartCount] = useState(0);
   const [wishlistCount, setWishlistCount] = useState(0);
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
   // Fetch cart & wishlist from localStorage on mount
+  const sesseion = useSession()
+
   useEffect(() => {
     if (typeof window !== "undefined") {
       const cart = JSON.parse(localStorage.getItem("cart") || "[]");
@@ -33,23 +35,23 @@ const NavActions = () => {
   return (
     <div className="flex items-center space-x-6">
       {/* Wishlist */}
-      <div className="relative bg-white text-black p-1 rounded-full cursor-pointer">
+      <Link href={"/wishlist"} className="relative bg-white text-black p-1 rounded-full cursor-pointer">
         <Heart />
         <Badge className="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center p-0">
           {wishlistCount}
         </Badge>
-      </div>
+      </Link>
 
       {/* Cart */}
-      <div className="relative cursor-pointer">
+      <Link href={"/cart"} className="relative cursor-pointer">
         <ShoppingCart className="w-6 h-6 hover:text-gray-300 transition-colors" />
         <Badge className="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center p-0">
           {cartCount}
         </Badge>
-      </div>
+      </Link>
 
       {/* Avatar Dropdown */}
-      {isLoggedIn &&
+      {sesseion.status === "authenticated" &&
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Avatar className="cursor-pointer">
@@ -60,12 +62,12 @@ const NavActions = () => {
           <DropdownMenuContent className="w-48" align="end">
             <DropdownMenuLabel>My Account</DropdownMenuLabel>
             <DropdownMenuSeparator />
-            <Link href="/account">
+            <Link href="/my-account">
               <DropdownMenuItem className="cursor-pointer">
                 <User className="mr-2 h-4 w-4" /> Profile
               </DropdownMenuItem>
             </Link>
-            <Link href="/orders">
+            <Link href="/order">
               <DropdownMenuItem className="cursor-pointer">
                 <Package className="mr-2 h-4 w-4" /> Order History
               </DropdownMenuItem>
@@ -73,9 +75,7 @@ const NavActions = () => {
             <DropdownMenuSeparator />
             <DropdownMenuItem
               className="cursor-pointer text-red-600"
-              onClick={() => {
-
-              }}
+              onClick={() => signOut({ callbackUrl: "/" })}
             >
               <LogOut className="mr-2 h-4 w-4" /> Logout
             </DropdownMenuItem>
@@ -84,7 +84,7 @@ const NavActions = () => {
       }
 
       {/* Sign In Button (only for larger screens) */}
-      {!isLoggedIn && <Link href="/login" onClick={() => setIsLoggedIn(false)}>
+      {sesseion.status !== "authenticated" && <Link href="/login" >
         <Button size="sm" className="hidden lg:block">
           Sign In
         </Button>

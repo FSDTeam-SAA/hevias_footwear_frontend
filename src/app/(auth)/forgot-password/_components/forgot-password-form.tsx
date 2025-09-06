@@ -46,11 +46,11 @@ const ForgotPasswordForm = () => {
       }).then((res) => res.json()),
 
     onSuccess: (data, email) => {
-      if (!data?.status) {
+      console.log(data)
+      if (!data?.success) {
         toast.error(data?.message || "Something went wrong");
         return;
       }
-
       toast.success(data?.message || "Email sent successfully!");
       router.push(`/otp?email=${encodeURIComponent(email)}`);
     },
@@ -64,6 +64,7 @@ const ForgotPasswordForm = () => {
   // 2. Define a submit handler.
   function onSubmit(values: z.infer<typeof formSchema>) {
     // console.log(values);
+    console.log(values.email);
     mutate(values.email);
   }
   return (

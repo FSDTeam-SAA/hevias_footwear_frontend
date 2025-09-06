@@ -18,7 +18,7 @@ import { Eye, EyeOff } from "lucide-react";
 import { useState } from "react";
 import { useMutation } from "@tanstack/react-query";
 import { toast } from "sonner";
-import { useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 
 const formSchema = z
   .object({
@@ -37,6 +37,7 @@ const ResetPasswordForm = () => {
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const searchParams = useSearchParams();
   const email = searchParams.get("email");
+  const router = useRouter();
   const decodedEmail = decodeURIComponent(email || "");
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -57,12 +58,12 @@ const ResetPasswordForm = () => {
         body: JSON.stringify(values),
       }).then((res) => res.json()),
     onSuccess: (data) => {
-      if (!data?.status) {
+      if (!data?.success) {
         toast.error(data?.message || "Something went wrong");
         return;
       } else {
-        // toast.success(data?.message || "Password Change successfully!");
-        // router.push(`/login`);
+        toast.success(data?.message || "Password Change successfully!");
+        router.push(`/login`);
 
       }
     },
