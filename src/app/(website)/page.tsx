@@ -12,13 +12,13 @@ import Cta from "@/components/Home/Cta";
 const Home = () => {
   return (
     <div>
-      <Hero />
-      <TrustedBrands />
-      <TradeAdvantageSection />
-      <Marketing />
-      <Businessneeds />
-      <NewArrivals />
-      <BestSellers />
+      <Hero/>
+      <TrustedBrands/>
+      <TradeAdvantageSection/>
+      <Marketing/>
+      <Businessneeds/>
+      <NewArrivals/>
+      <BestSellers/>
       <WhyChooseFastlane/>
       <Cta/>
     </div>

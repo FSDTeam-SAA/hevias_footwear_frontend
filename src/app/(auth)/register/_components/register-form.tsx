@@ -75,7 +75,7 @@ const RegisterForm = () => {
         body: JSON.stringify(values),
       }).then((res) => res.json()),
     onSuccess: (data) => {
-      if (!data?.status) {
+      if (!data?.success) {
         toast.error(data?.message || "Something went wrong");
         return;
       }
@@ -91,7 +91,7 @@ const RegisterForm = () => {
       name: values.name,
       email: values.email,
       password: values.password,
-      phone: values.phone
+      phoneNumber: values.phone
     };
     mutate(payload);
   }
