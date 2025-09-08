@@ -85,8 +85,8 @@ const NavActions = () => {
 
       {/* Sign In Button (only for larger screens) */}
       {sesseion.status !== "authenticated" && <Link href="/login" >
-        <Button size="sm" className="hidden lg:block">
-          Sign In
+        <Button size="lg" className="hidden lg:block ">
+          Sign In 
         </Button>
       </Link>
 
