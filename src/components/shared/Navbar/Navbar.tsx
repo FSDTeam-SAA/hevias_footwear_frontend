@@ -9,7 +9,7 @@ import DesktopNavigation from "./DesktopNavigation";
 import NavActions from "./NavActions";
 import MobileNavigation from "./MobileNavigation";
 import { useShardStore } from "@/zustand/shared";
-
+import log from "@/../public/shared/logo.png"
 const Navbar = () => {
   const { isOpen, setIsOpen } = useShardStore();
 
@@ -21,7 +21,7 @@ const Navbar = () => {
           <Link href={"/"}>
             <div>
               <Image
-                src={"/shared/logo.png"}
+                src={log}
                 alt="logo.png"
                 width={1000}
                 height={1000}
