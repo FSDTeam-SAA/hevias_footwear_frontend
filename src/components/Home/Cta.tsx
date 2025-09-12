@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react"
 
 const Cta = () => {
     return (
-        <section className="bg-btnPrimary mx-4  md:mx-20 rounded-2xl py-12 md:py-16 mt-32">
+        <section className="bg-btnPrimary mx-4 md:mx-20 rounded-2xl py-12 md:py-16">
             <div className="px-4 text-center text-white space-y-4 flex flex-col items-center">
                 <h1 className="text-2xl md:text-[40px] font-semibold leading-snug">
                     Ready To Grow Your Business?
